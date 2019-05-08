@@ -14,13 +14,20 @@ This website was created with [Docusaurus](https://docusaurus.io/).
 
 ```sh
 # Install dependencies
-$ yarn
+$ npm
 ```
-2. Run your dev server:
+3. Go to the website folder:
+
+```sh
+# Go to the folder
+$ cd website
+```
+
+3. Run your dev server:
 
 ```sh
 # Start the site
-$ yarn start
+$ npm start
 ```
 
 ## Directory Structure
@@ -28,7 +35,7 @@ $ yarn start
 Your project file structure should look something like this
 
 ```
-my-docusaurus/
+docusaurus/
   docs/
     doc-1.md
     doc-2.md
