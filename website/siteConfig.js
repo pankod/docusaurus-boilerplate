@@ -63,6 +63,9 @@ const siteConfig = {
 		{ doc: 'doc4', label: 'API' },
 		{ page: 'help', label: 'Help' },
 		{ blog: true, label: 'Blog' },
+		{ href: 'https://github.com/pankod/' + packageName, label: 'Github' },
+		{ search: true },
+		{ languages: true }
 	],
 
 	// If you have users set above, you add it here:
@@ -110,6 +113,16 @@ const siteConfig = {
 	cleanUrl: true,
 
 	// Open Graph and Twitter card images.
+	// Google Analytics id
+	gaTrackingId: "",
+
+	// Facebook settings
+	facebookAppId: "",
+	facebookPixelId: "",
+	facebookComments: false,
+
+	// Twitter settings
+	twitter: "",
 	ogImage: 'img/undraw_online.svg',
 	twitterImage: 'img/undraw_tweetstorm.svg',
 
@@ -122,6 +135,9 @@ const siteConfig = {
 	// You may provide arbitrary config keys to be used as needed by your
 	// template. For example, if you need your repo's URL...
 	repoUrl: "https://github.com/pankod/" + packageName,
+
+	// Custom css
+	separateCss: []
 };
 
 module.exports = siteConfig;
