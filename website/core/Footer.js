@@ -96,15 +96,14 @@ class Footer extends React.Component {
         </section>
 
         <a
-          href="https://opensource.facebook.com/"
+          href="https://github.com/pankod"
           target="_blank"
           rel="noreferrer noopener"
           className="fbOpenSource">
           <img
             src={`${this.props.config.baseUrl}img/pankod_footer_logo.png`}
-            alt="Facebook Open Source"
+            alt="Pankod Open Source"
             width="170"
-            height="45"
           />
         </a>
         <section className="copyright">{this.props.config.copyright}</section>
