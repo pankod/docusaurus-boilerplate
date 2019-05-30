@@ -4,6 +4,8 @@ This website was created with [Docusaurus](https://docusaurus.io/).
 
 # What's In This Document
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/pankod/docusaurus-boilerplate.svg)](https://greenkeeper.io/)
+
 * [Get Started in 5 Minutes](#get-started-in-5-minutes)
 
 # Get Started in 5 Minutes
