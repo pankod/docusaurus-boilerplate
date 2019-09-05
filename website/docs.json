@@ -1,17 +1,21 @@
 [
 	{
-		"id": "doc1",
-		"title": "Latin-ish",
-		"sidebarLevel": "Example Page"
+		"id": "getting-started",
+		"title": "Getting Started"
 	},
 	{
-		"id": "doc2",
-		"title": "document number 2",
+		"id": "usage",
+		"title": "Usage",
 		"sidebarLevel": null
 	},
 	{
-		"id": "doc3",
-		"title": "document number 3",
+		"id": "features",
+		"title": "Features",
+		"sidebarLevel": null
+	},
+	{
+		"id": "setup",
+		"title": "Setup",
 		"sidebarLevel": null
 	}
 ]
