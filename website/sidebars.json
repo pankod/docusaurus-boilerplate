@@ -1,19 +1,17 @@
 {
 	"docs": {
-		"Docusaurus": [
-			"doc1"
+		"Introduction": [
+			"getting-started"
 		],
-		"First Category": [
-			"doc2"
+		"Overview": [
+			"setup"
+
 		],
-		"Second Category": [
-			"doc3"
-		]
-	},
-	"docs-other": {
-		"First Category": [
-			"doc4",
-			"doc5"
+		"Features": [
+			"features"
+		],
+		"Usage": [
+			"usage"
 		]
 	}
 }

@@ -31,8 +31,8 @@ class HomeSplash extends React.Component {
 
 		const ProjectTitle = () => (
 			<h2 className="projectTitle">
-				{siteConfig.title}
-				<small>{siteConfig.tagline}</small>
+				{siteConfig.headerTitle}
+				<small className="header-title" >{siteConfig.tagline}</small>
 			</h2>
 		);
 
@@ -55,28 +55,25 @@ class HomeSplash extends React.Component {
 		return (
 			<SplashContainer>
 				<div className="inner">
+					<img className="home-banner" src="img/banner4.png" />
 					<ProjectTitle siteConfig={siteConfig} />
-					<PromoSection>
-						<Button href="#try">Try It Out</Button>
-						<Button href={docUrl('doc1.html')}>Example Link</Button>
-						<Button href={docUrl('doc2.html')}>Example Link 2</Button>
-					</PromoSection>
+
 				</div>
 				<div className="top-badges">
-					<a target="_blank" href={"https://www.npmjs.com/package/" + siteConfig.packageName}>
-						<img src={`https://img.shields.io/npm/v/${siteConfig.packageName}.svg`} alt="Npm version" />
+					<a href="https://codeclimate.com/github/pankod/docusaurus-boilerplate/maintainability">
+						<img src="https://api.codeclimate.com/v1/badges/077c02d5cb9ec7d8a654/maintainability" />
 					</a>
-					<a target="_blank" href={"https://www.npmjs.com/package/" + siteConfig.packageName}>
-						<img src={`https://img.shields.io/npm/dm/${siteConfig.packageName}.svg`} alt="Npm downloads" />
+					<a href="https://codeclimate.com/github/pankod/docusaurus-boilerplate/test_coverage">
+						<img src="https://api.codeclimate.com/v1/badges/077c02d5cb9ec7d8a654/test_coverage" />
 					</a>
-					<a target="_blank" href={"https://david-dm.org/pankod/" + siteConfig.packageName}>
-						<img src={`https://david-dm.org/pankod/${siteConfig.packageName}/status.svg`} alt="Dependencies status" />
+					<a href="https://travis-ci.org/pankod/docusaurus-boilerplate">
+						<img src="https://travis-ci.org/pankod/docusaurus-boilerplate.svg?branch=master" alt="Build Status" />
 					</a>
-					<a target="_blank" href={`https://david-dm.org/pankod/${siteConfig.packageName}?type=dev`}>
-						<img src={`https://david-dm.org/pankod/${siteConfig.packageName}/dev-status.svg`} alt="Devdependencies status" />
+					<a href="https://david-dm.org/pankod/docusaurus-boilerplate">
+						<img src="https://david-dm.org/pankod/docusaurus-boilerplate.svg" alt="Dependency Status" />
 					</a>
-					<a target="_blank" href={`https://travis-ci.com/pankod/${siteConfig.packageName}`}>
-						<img src={`https://travis-ci.com/pankod/${siteConfig.packageName}.svg?branch=master`} alt="Build status" />
+					<a href="https://david-dm.org/pankod/docusaurus-boilerplate#info=devDependencies">
+						<img src="https://david-dm.org/pankod/moleculerjs-boilerplate/dev-status.svg" alt="devDependency Status" />
 					</a>
 				</div>
 			</SplashContainer>
@@ -95,7 +92,7 @@ class Index extends React.Component {
 				id={props.id}
 				background={props.background}>
 				<GridBlock
-					align="center"
+					align={props.align}
 					contents={props.children}
 					layout={props.layout}
 				/>
@@ -106,8 +103,7 @@ class Index extends React.Component {
 			<div
 				className="productShowcaseSection paddingBottom"
 				style={{ textAlign: 'center' }}>
-				<h2>Feature Callout</h2>
-				<MarkdownBlock>These are features of this project</MarkdownBlock>
+				<h2>Features </h2>
 			</div>
 		);
 
@@ -116,26 +112,10 @@ class Index extends React.Component {
 				{[
 					{
 						content:
-							'To make your landing page more attractive, use illustrations! Check out ' +
-							'[**unDraw**](https://undraw.co/) which provides you with customizable illustrations which are free to use. ' +
-							'The illustrations you see on this page are from unDraw.',
-						image: `${baseUrl}img/undraw_code_review.svg`,
+							'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+						image: `${baseUrl}img/sample.svg`,
 						imageAlign: 'left',
-						title: 'Wonderful SVG Illustrations',
-					},
-				]}
-			</Block>
-		);
-
-		const Description = () => (
-			<Block background="dark">
-				{[
-					{
-						content:
-							'This is another description of how this project is useful',
-						image: `${baseUrl}img/undraw_note_list.svg`,
-						imageAlign: 'right',
-						title: 'Description',
+						title: 'Ultrices',
 					},
 				]}
 			</Block>
@@ -146,79 +126,102 @@ class Index extends React.Component {
 				{[
 					{
 						content:
-							'Each new Docusaurus project has **randomly-generated** theme colors.',
-						image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
+						  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+						image: `${baseUrl}img/sample.svg`,
 						imageAlign: 'right',
-						title: 'Randomly Generated Theme Colors',
+						title: 'Nullam',
+					},
+				]}
+			</Block>
+		);
+		const LastFeature = () => (
+			<Block background="light">
+				{[
+					{
+						content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
+						image: `${baseUrl}img/sample.svg`,
+						imageAlign: 'right',
+						title: 'Mattis'
 					},
 				]}
 			</Block>
 		);
 
 		const Features = () => (
-			<Block layout="fourColumn">
-				{[
-					{
-						content: 'This is the content of my feature',
-						image: `${baseUrl}img/undraw_react.svg`,
-						imageAlign: 'top',
-						title: 'Feature One',
-					},
-					{
-						content: 'The content of my second feature',
-						image: `${baseUrl}img/undraw_operating_system.svg`,
-						imageAlign: 'top',
-						title: 'Feature Two',
-					},
-					{
-						content: 'The content of my third feature',
-						image: `${baseUrl}img/undraw_open_source.svg`,
-						imageAlign: 'top',
-						title: 'Feature Three',
-					},
-				]}
-			</Block>
+			<React.Fragment>
+				<Block layout="fourColumn" align='center'>
+					{[
+						{
+							content: 'Commodo sed egestas egestas fringilla phasellus faucibus scelerisque sodales ut.',
+							image: `${baseUrl}img/sample-screen.svg`,
+							imageAlign: 'top',
+							title: 'Ipsum',
+						},
+						{
+							content: 'Commodo sed egestas egestas fringilla phasellus faucibus scelerisque sodales ut.',
+							image: `${baseUrl}img/sample-screen.svg`,
+							imageAlign: 'top',
+							title: 'Ipsum',
+						},
+						{
+							content: 'Commodo sed egestas egestas fringilla phasellus faucibus scelerisque sodales ut.',
+							image: `${baseUrl}img/sample-screen.svg`,
+							imageAlign: 'top',
+							title: 'Ipsum',
+							className: 'orm'
+						},
+						{
+							content: 'Commodo sed egestas egestas fringilla phasellus faucibus scelerisque sodales ut.',
+							image: `${baseUrl}img/sample-screen.svg`,
+							imageAlign: 'top',
+							title: 'Ipsum',
+						}
+					]}
+				</Block>
+
+				<Block layout="fourColumn" align='center'>
+					{[
+
+						{
+							content: 'Commodo sed egestas egestas fringilla phasellus faucibus scelerisque sodales ut.',
+							image: `${baseUrl}img/sample-screen.svg`,
+							imageAlign: 'top',
+							title: 'Ipsum',
+						},
+						{
+							content: 'Commodo sed egestas egestas fringilla phasellus faucibus scelerisque sodales ut.',
+							image: `${baseUrl}img/sample-screen.svg`,
+							imageAlign: 'top',
+							title: 'Ipsum',
+						},
+						{
+							content: 'Commodo sed egestas egestas fringilla phasellus faucibus scelerisque sodales ut.',
+							image: `${baseUrl}img/sample-screen.svg`,
+							imageAlign: 'top',
+							title: 'Ipsum',
+						},
+						{
+							content: 'Commodo sed egestas egestas fringilla phasellus faucibus scelerisque sodales ut.',
+							image: `${baseUrl}img/sample-screen.svg`,
+							imageAlign: 'top',
+							title: 'Ipsum',
+						}
+					]}
+				</Block>
+			</React.Fragment>
 		);
 
-		const Showcase = () => {
-			if ((siteConfig.users || []).length === 0) {
-				return null;
-			}
 
-			const showcase = siteConfig.users
-				.filter(user => user.pinned)
-				.map(user => (
-					<a href={user.infoLink} key={user.infoLink}>
-						<img src={user.image} alt={user.caption} title={user.caption} />
-					</a>
-				));
-
-			const pageUrl = page => baseUrl + (language ? `${language}/` : '') + page;
-
-			return (
-				<div className="productShowcaseSection paddingBottom">
-					<h2>Who is Using This?</h2>
-					<p>This project is used by all these people</p>
-					<div className="logos">{showcase}</div>
-					<div className="more-users">
-						<a className="button" href={pageUrl('users.html')}>
-							More {siteConfig.title} Users
-            </a>
-					</div>
-				</div>
-			);
-		};
 
 		return (
 			<div>
 				<HomeSplash siteConfig={siteConfig} language={language} />
-				<div className="mainContainer">
+				<div className="mainContainer homeMain">
 					<Features />
 					<FeatureCallout />
 					<LearnHow />
 					<TryOut />
-					<Description />
-					<Showcase />
+					<LastFeature />
 				</div>
 			</div>
 		);

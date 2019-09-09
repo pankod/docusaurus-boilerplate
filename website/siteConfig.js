@@ -20,29 +20,24 @@ const users = [
 	},
 ];
 
-const organizationName = "Pankod Inc.";
-const projectName = "React Native Project";
-const packageName = "react-native-picker-modal-view";
+const organizationName = 'pankod';
+const projectName = 'docusaurus-boilerplate';
+const packageName = 'docusaurus-boilerplate';
 const url = [
 	{
-		title: "Facebook",
-		url: ""
+		title: 'Twitter',
+		url: 'https://twitter.com/PankodDev',
 	},
-	{
-		title: "Instagram",
-		url: ""
-	},
-	{
-		title: "Twitter",
-		url: ""
-	}
-]
+];
 
 const siteConfig = {
 	title: 'Pankod', // Title for your website.
-	tagline: 'Open Source Documentation',
-	url: 'https://www.pankod.com', // Your website URL
-	baseUrl: '/', // Base URL for your project */
+	headerTitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+	tagline:
+		'Docusaurus Boilerplate',
+
+	url: 'https://pankod.github.io', // Your website URL
+	baseUrl: '/docusaurus-boilerplate/', // Base URL for your project */
 	// For github.io type URLs, you would set the url and baseUrl like:
 	//   url: 'https://facebook.github.io',
 	//   baseUrl: '/test-site/',
@@ -59,13 +54,11 @@ const siteConfig = {
 
 	// For no header links in the top nav bar -> headerLinks: [],
 	headerLinks: [
-		{ doc: 'doc1', label: 'Docs' },
-		{ doc: 'doc4', label: 'API' },
-		{ page: 'help', label: 'Help' },
-		{ blog: true, label: 'Blog' },
+		{ doc: 'getting-started', label: 'Docs' },
+		/* 		{ page: 'users', label: 'Help' }, */
 		{ href: 'https://github.com/pankod/' + packageName, label: 'Github' },
 		{ search: true },
-		{ languages: true }
+		{ languages: true },
 	],
 
 	// If you have users set above, you add it here:
@@ -101,7 +94,7 @@ const siteConfig = {
 
 	highlight: {
 		// Highlight.js theme to use for syntax highlighting in code blocks.
-		theme: 'default',
+		theme: 'tomorrow-night',
 	},
 
 	// Add custom scripts here that would be placed in <script> tags.
@@ -114,15 +107,15 @@ const siteConfig = {
 
 	// Open Graph and Twitter card images.
 	// Google Analytics id
-	gaTrackingId: "",
+	gaTrackingId: 'UA-143750629-1',
 
 	// Facebook settings
-	facebookAppId: "",
-	facebookPixelId: "",
+	facebookAppId: '',
+	facebookPixelId: '',
 	facebookComments: false,
 
 	// Twitter settings
-	twitter: "",
+	twitter: '',
 	ogImage: 'img/undraw_online.svg',
 	twitterImage: 'img/undraw_tweetstorm.svg',
 
@@ -134,10 +127,10 @@ const siteConfig = {
 
 	// You may provide arbitrary config keys to be used as needed by your
 	// template. For example, if you need your repo's URL...
-	repoUrl: "https://github.com/pankod/" + packageName,
+	repoUrl: 'https://github.com/pankod/' + packageName,
 
 	// Custom css
-	separateCss: []
+	separateCss: [],
 };
 
 module.exports = siteConfig;

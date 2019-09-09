@@ -1,4 +1,4 @@
-<img src="https://github.com/pankod/docusaurus-boilerplate/blob/master/demo.png" alt="Pankod - docusaurus-boilerplate" align="center" />
+<img src="./demo.png" alt="Pankod - docusaurus-boilerplate" align="center" />
 
 This website was created with [Docusaurus](https://docusaurus.io/).
 
